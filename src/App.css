@@ -1,38 +1,93 @@
-.App {
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 40px;
+  background: whitesmoke;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.boardrow:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.Square {
+  color: #424242;
+  background: whitesmoke;
+  border: 2px solid black;
+  float: left;
+  font-size: 96px;
+  font-weight: bold;
+  line-height: 136px;
+  height: 136px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 136px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Game {
+  display: flex;
+  flex-direction: column;
+}
+
+.Game-info {
+  font-size: 48px;
+  color: #424242;
+  margin-top: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Restart-button {
+  margin-top: 20px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.restart:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.restart:focus {
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.restart:active {
+  box-shadow: 0 1px #424242;
+  transform: translateY(1px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Restart {
+  transition-duration: 0.4s;
+  background-color: #424242;
+  color: #fffde7;
+  border: none;
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  width: 40%;
+  text-align: center;
+  border-radius: 4px;
 }
